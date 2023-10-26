@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.App {
+  height: 100vh;
+  background-color: rgb(104, 104, 104);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  background-color: rgb(216, 216, 216);
+  padding: 50px 50px;
+  border-radius: 10px;
+  height: 300px;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+}
