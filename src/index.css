@@ -14,18 +14,48 @@ code {
 
 .App {
   height: 100vh;
-  background-color: rgb(104, 104, 104);
+
+
+  background-image: radial-gradient(circle, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .form {
-  background-color: rgb(216, 216, 216);
+  box-shadow: rgba(214, 213, 213, 0.736) 0px 7px 29px 0px;
+  background-color: rgb(255, 255, 255);
   padding: 50px 50px;
   border-radius: 10px;
+  width: 600px;
   height: 300px;
   justify-content: space-around;
   display: flex;
   flex-direction: column;
+}
+
+.gender-sec {
+  display: flex;
+}
+
+.gender-con {
+  display: flex;
+
+}
+
+
+.language-sec {
+  display: flex;
+}
+
+.form-btn {
+  background-color: aquamarine;
+}
+
+.form-row {
+  display: flex;
+}
+
+.form-con {
+  display: grid;
 }
