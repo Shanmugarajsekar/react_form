@@ -1,61 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Jost:wght@300&family=Libre+Franklin&family=Lora&family=Neucha&family=Noto+Sans:wght@300;400&family=Oswald:wght@200;300;400;500;600;700&family=Pontano+Sans:wght@300&family=Roboto:wght@100&family=Titillium+Web:wght@200;300;400&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+::placeholder {
+  font-family: 'Times New Roman', Times, serif;
 }
+
 
 .App {
   height: 100vh;
-
-
-  background-image: radial-gradient(circle, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+  background-image: url("https://images.unsplash.com/photo-1431440869543-efaf3388c585?auto=format&fit=crop&q=80&w=2940&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .form {
-  box-shadow: rgba(214, 213, 213, 0.736) 0px 7px 29px 0px;
-  background-color: rgb(255, 255, 255);
-  padding: 50px 50px;
-  border-radius: 10px;
-  width: 600px;
-  height: 300px;
-  justify-content: space-around;
+  border: 1px solid black;
+  background-color: #fbe8fff7;
+  padding: 20px 30px;
+  border-radius: 5px;
+  width: 350px;
+  height: 400px;
+  justify-content: space-between;
   display: flex;
   flex-direction: column;
 }
 
-.gender-sec {
-  display: flex;
+@media only screen and (max-width: 600px) {
+  .form {
+    padding: 20px 20px;
+    width: 280px;
+    margin: 0px;
+    height: auto;
+  }
+
+
 }
 
-.gender-con {
-  display: flex;
+
+.form input[type="checkbox"] {
+  cursor: pointer;
+  margin: 0px;
+  padding: 0px;
+  margin-right: 4px;
+  accent-color: #d88ce736;
 
 }
 
 
-.language-sec {
-  display: flex;
+.form input[type="radio"] {
+  cursor: pointer;
+  margin: 0px;
+  padding: 0px;
+  margin-right: 4px;
+  accent-color: auto;
+  accent-color: #b343b5;
+
 }
+
+
+
+.form-row label {
+  margin-left: -9999px;
+  display: none;
+}
+
+.form-header {
+  display: grid;
+  place-items: center;
+  font-family: 'Noto Sans', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 20px;
+}
+
+.form-btn-sec {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
 
 .form-btn {
-  background-color: aquamarine;
+  background-color: #764480;
+  width: 80px;
+  padding: 6px 4px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 4px;
+  display: block;
+  border: none;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+  margin: 10px 10px;
 }
+
+.form-btn:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+
+
 
 .form-row {
   display: flex;
+
+}
+
+.form-row label {
+  font-family: 'Titillium Web', sans-serif;
+
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.8px;
+}
+
+label {
+  font-family: 'Noto Sans', sans-serif;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 1px;
+
+}
+
+@media only screen and (max-width: 600px) {
+  label {
+    font-size: 11px;
+  }
+}
+
+.label-font {
+  font-family: 'Times New Roman', Times, serif;
+  opacity: 0.8;
+  letter-spacing: 0.5px;
+  text-transform: none !important;
+}
+
+
+
+.form-mobile {
+  width: 100% !important;
 }
 
 .form-con {
-  display: grid;
+  width: 100%;
+  place-items: flex-start;
+  display: flex;
+  margin-bottom: 10px;
+  margin-right: 8px;
+  gap: 8px;
+
 }
+
+.form-con label {
+  font-family: 'Jost', sans-serif;
+
+  font-size: 13px;
+  font-weight: 300;
+}
+
+
+
+.form-input {
+  width: 97%;
+  height: 23px;
+  border: none;
+  border-bottom: 1px solid rgb(80 0 96);
+  background-color: rgba(245, 245, 220, 0);
+
+}
+
+.form-input:focus {
+  font-family: 'Titillium Web', sans-serif;
+
+  border-bottom: 1px solid gray;
+  outline: none;
+
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-around;
+}
+
+.form-group-con {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.form-option {
+  display: flex;
+  justify-content: center;
+  margin: 4px 8px;
+  align-items: center;
+}
+
+.form-option-label {
+  display: flex;
+  justify-content: center;
+  margin: 8px 8px;
+}
+
+.form-group-label label {
+  font-family: 'Noto Sans', sans-serif !important;
+  text-transform: uppercase !important;
+}
+
+
+.form-dob {
+  width: auto;
+  margin-left: 40px;
+}
+
+
+
+.custom-date-input {
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: #d88ce736;
+  padding: 5px 5px;
+
+}
+
+.custom-date-input:focus {
+  border: none;
+  border-bottom: 0.5px solid black;
+  outline: none;
+}
+
+/* Style the input */
+/* .custom-date-input input[type="date"] {
+  background-color: rgba(255, 255, 255, 0);
+
+  border: none;
+  border-bottom: 0.5px solid gray;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  cursor: pointer;
+} */

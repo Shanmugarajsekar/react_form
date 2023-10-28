@@ -10,6 +10,7 @@ function App() {
     language: [],
     date: "",
     gender: "",
+    city: "",
   });
 
   const handleChange = (event) => {
@@ -37,27 +38,46 @@ function App() {
     });
   };
 
+  const handelReset = (e) => {
+    console.log("reset");
+    setdata({
+      firstname: "",
+      secondname: "",
+      phone: "",
+      mail: "",
+      language: [],
+      date: "",
+      gender: "",
+      city: "",
+    });
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.table(data);
+    console.log(data);
   };
 
   return (
     <div className="App">
       <form className="form" onSubmit={handleSubmit}>
+        <div className="form-header">
+          <p>Registration</p>
+        </div>
         <div className="form-row">
+          <div className="form-row">
+            <label>Name</label>
+          </div>
           <div className="form-con">
-            <label>First Name</label>
             <input
+              placeholder="First name"
+              className="form-input"
               type="text"
               name="firstname"
               onChange={handleChange}
               value={data.firstname}
-            ></input>{" "}
-          </div>
-          <div className="form-con">
-            <label>Second Name</label>
+            ></input>
             <input
+              placeholder="Last name"
+              className="form-input"
               type="text"
               name="secondname"
               onChange={handleChange}
@@ -65,65 +85,123 @@ function App() {
             ></input>
           </div>
         </div>
-        <div>
-          <label>Phone Number</label>
-          <input
-            type="number"
-            name="phone"
-            onChange={handleChange}
-            value={data.phone}
-          ></input>{" "}
-          <label>Mail</label>
-          <input type="email" name="mail" onChange={handleChange}></input>
-        </div>
-
-        <div className="gender-sec">
-          <label>Gender</label>
-          <div className="gender-con">
+        <div className="form-row">
+          <div className="form-row">
+            <label>Mobile number</label>
+          </div>
+          <div className="form-con">
             <input
-              name="gender"
-              value="male"
-              type="radio"
+              placeholder="+91-"
+              className="form-input form-mobile"
+              type="number"
+              name="phone"
               onChange={handleChange}
-            ></input>{" "}
-            <label>Male</label>
-            <input
-              name="gender"
-              value="Female"
-              type="radio"
-              onChange={handleChange}
+              value={data.phone}
             ></input>
-            <label>Female</label>
+          </div>
+          <div className="form-row">
+            <label>City</label>
+          </div>
+          <div className="form-con">
+            <input
+              placeholder="City"
+              className="form-input form-mobile"
+              type="text"
+              name="city"
+              onChange={handleChange}
+              value={data.city}
+            ></input>
           </div>
         </div>
-        <div className="language-sec">
-          <label>Language</label>
-          <div className="language-con">
-            <div>
-              <input
-                name="language"
-                value="english"
-                type="checkbox"
-                onChange={handleChange}
-              ></input>
-              <label>English</label>
+        <div>
+          <div className="form-row">
+            <label>Mail</label>
+          </div>
+          <div className="form-con">
+            <input
+              placeholder="Sample@mail.com"
+              type="email"
+              name="mail"
+              onChange={handleChange}
+              className="form-input"
+            ></input>
+          </div>
+        </div>
 
-              <input
-                name="language"
-                value="tamil"
-                type="checkbox"
-                onChange={handleChange}
-              ></input>
-              <label>Tamil</label>
+        <div className="form-group">
+          <div>
+            <div className="form-option-label">
+              <label>Gender</label>
+            </div>
+            <div className="form-group-con">
+              <div className="form-option">
+                <input
+                  name="gender"
+                  value="male"
+                  type="radio"
+                  onChange={handleChange}
+                ></input>
+                <label className="form-group-label label-font">Male</label>
+              </div>
+              <div className="form-option">
+                <input
+                  name="gender"
+                  value="Female"
+                  type="radio"
+                  onChange={handleChange}
+                ></input>
+                <label className="form-group-label label-font">Female</label>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div className="form-option-label">
+              <label>Language</label>
+            </div>
+            <div className="form-group-con">
+              <div className="form-option">
+                <input
+                  name="language"
+                  value="english"
+                  type="checkbox"
+                  onChange={handleChange}
+                ></input>
+                <label className="form-group-label label-font">English</label>
+              </div>
+              <div className="form-option">
+                <input
+                  name="language"
+                  value="tamil"
+                  type="checkbox"
+                  onChange={handleChange}
+                ></input>
+                <label className="form-group-label label-font">Tamil</label>
+              </div>
             </div>
           </div>
         </div>
-        <div>
-          <label>Date of Birth</label>
-          <input type="date" name="date" onChange={handleChange}></input>
+        {/* <div className="form-row">
+         
+        </div> */}
+        <div className="form-option">
+          <label>Date of birth</label>{" "}
+          <input
+            type="date"
+            name="date"
+            onChange={handleChange}
+            className="form-dob custom-date-input"
+          ></input>
         </div>
-        <div>
-          <input className="form-btn" type="submit" value="Send"></input>
+
+        <div className="form-btn-sec">
+          <input
+            className="form-btn "
+            type="reset"
+            value="Reset"
+            onClick={handelReset}
+          ></input>
+
+          <input className="form-btn " type="submit" value="Register"></input>
         </div>
       </form>
     </div>
