@@ -8,7 +8,9 @@
 
 ## Live demo
 
-- <a href="https://registration-form-reactjs-xo.vercel.app/" target="blank"> Live preview Of form</a>
+<!-- - <a href="https://registration-form-reactjs-xo.vercel.app/" target="blank"> Live preview Of form</a> -->
+
+- https://registration-form-reactjs-xo.vercel.app/
 
 ## Features
 
