@@ -93,10 +93,12 @@ function App() {
             <input
               placeholder="+91-"
               className="form-input form-mobile"
-              type="number"
+              type="text"
               name="phone"
               onChange={handleChange}
               value={data.phone}
+              maxLength={10} // Set the maximum length to 10
+              minLength={10} // Set the minimum length to 10
             ></input>
           </div>
           <div className="form-row">

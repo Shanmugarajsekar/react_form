@@ -6,6 +6,10 @@
 
 <img src="./public/react-form-sc.png">
 
+## Live demo
+
+- <a href="https://registration-form-reactjs-xo.vercel.app/" target="blank"> Live preview Of form</a>
+
 ## Features
 
 - Registration form contain various fields for user name , email , phone etc..
